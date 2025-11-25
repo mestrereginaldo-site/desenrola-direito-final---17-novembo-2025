@@ -20,6 +20,69 @@ import SupportCommunity from "./pages/SupportCommunity";
 import { Toaster } from "@/components/ui/toaster";
 import ScrollToTop from "./components/ui/ScrollToTop";
 
+// Componente temporário para testar se as cores funcionam
+function TestColors() {
+  return (
+    <div className="min-h-screen bg-background text-foreground p-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-primary mb-4">
+          Teste de Cores - Desenrola Direito
+        </h1>
+        <p className="text-lg text-muted-foreground mb-6">
+          Se você está vendo cores, o tema está funcionando!
+        </p>
+        
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="bg-card p-6 rounded-lg border">
+            <h2 className="text-2xl font-semibold text-card-foreground mb-2">
+              Cartão Primário
+            </h2>
+            <p className="text-muted-foreground">
+              Este é um cartão de teste com cores do tema.
+            </p>
+            <button className="mt-4 bg-primary text-primary-foreground px-4 py-2 rounded">
+              Botão Primário
+            </button>
+          </div>
+
+          <div className="bg-secondary p-6 rounded-lg border">
+            <h2 className="text-2xl font-semibold text-secondary-foreground mb-2">
+              Cartão Secundário
+            </h2>
+            <p className="text-muted-foreground">
+              Este é um cartão secundário.
+            </p>
+            <button className="mt-4 bg-accent text-accent-foreground px-4 py-2 rounded">
+              Botão de Destaque
+            </button>
+          </div>
+
+          <div className="bg-destructive p-6 rounded-lg border">
+            <h2 className="text-2xl font-semibold text-destructive-foreground mb-2">
+              Cartão Destrutivo
+            </h2>
+            <p className="text-muted-foreground">
+              Este é um cartão destrutivo.
+            </p>
+            <button className="mt-4 bg-destructive text-destructive-foreground px-4 py-2 rounded">
+              Botão Destrutivo
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-8 p-6 bg-muted rounded-lg">
+          <h2 className="text-2xl font-semibold text-muted-foreground">
+            Área de Texto Secundário
+          </h2>
+          <p className="text-foreground">
+            Esta é uma área com fundo secundário.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -27,7 +90,8 @@ function Router() {
       <Navbar />
       <main className="flex-grow">
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/" component={TestColors} />
+          <Route path="/teste-cores" component={TestColors} />
           <Route path="/artigos" component={AllArticles} />
           <Route path="/artigos/:slug" component={Article} />
           <Route path="/categorias/:slug" component={CategoryArticles} />
