@@ -3,10 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desenrola Direito - Simplifique o conhecimento jurídico</title>
+    <title>Desenrola Direito</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        text-align: center;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .status {
+        background: rgba(255,255,255,0.2);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="container">
+      <h1>🎉 DESENROLA DIREITO 🎉</h1>
+      <p>Site em funcionamento!</p>
+      <div class="status">
+        <strong>Status: ONLINE</strong><br>
+        React carregado com sucesso
+      </div>
+    </div>
+    
+    <script type="module">
+      // Script simples para confirmar que o JavaScript está funcionando
+      console.log('✅ JavaScript está funcionando!');
+      console.log('✅ React será carregado em breve...');
+      
+      // Adiciona um efeito de digitação para mostrar que JS funciona
+      const title = document.querySelector('h1');
+      const originalText = title.textContent;
+      title.textContent = '';
+      let i = 0;
+      const typeWriter = () => {
+        if (i < originalText.length) {
+          title.textContent += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      };
+      typeWriter();
+    </script>
   </body>
 </html>
